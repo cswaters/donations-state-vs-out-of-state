@@ -1,11 +1,12 @@
 library(tidyverse)
 
+# add minimal theme with rotated x-axis labels
 theme_rot_x <- theme_minimal() +
   theme(axis.text.x  = element_text(angle = 55, hjust = .9))
 theme_set(theme_rot_x)
 
 
-# Get FEC file
+# Get FEC file (hosted on Dropbox)
 west_url <- 'http://bit.ly/2OoPYbN'
 west_donations_12 <- vroom::vroom(west_url)
 
